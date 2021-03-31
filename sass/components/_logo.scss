@@ -1,0 +1,23 @@
+.logo {
+  font-family: var(--secondaryFont);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: #000000;
+
+  &--color-blue {
+    color: var(--activeLinkColor);
+  }
+  &--color-white {
+    color: var(--whiteTextColor);
+  }
+}
+
+.header__logo {
+  margin-right: 93px;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}

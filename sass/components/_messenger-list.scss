@@ -1,0 +1,36 @@
+.messenger-list {
+  display: flex;
+  justify-content: space-between;
+
+  &__item--footer {
+    margin-right: 10px;
+  }
+
+  &__link {
+    @include centeredFlex(flex);
+    justify-content: center;
+
+    color: #afb1b8;
+
+    transition: var(--transitionBg), var(--transitionColor);
+
+    border-radius: 50%;
+
+    &--footer {
+      color: #ffffff;
+
+      background-color: rgba(255, 255, 255, 0.1);
+
+      &:hover,
+      &:focus {
+        background-color: var(--activeLinkColor);
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--activeLinkColor);
+      color: var(--whiteTextColor);
+    }
+  }
+}
