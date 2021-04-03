@@ -1,22 +1,42 @@
 .clients {
   &__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-left: -30px;
+    @media screen and (max-width: 1199px) {
+      margin-bottom: -30px;
+    }
   }
 
   &__item {
     display: flex;
     margin-left: 30px;
-    flex-basis: calc(100% / 6 - 30px);
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 767px) {
+      flex-basis: calc(100% / 2 - 30px);
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 3 - 30px);
+    }
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 6 - 30px);
+    }
   }
 
   &__link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
     color: #afb1b8;
 
