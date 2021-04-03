@@ -1,8 +1,8 @@
 .messenger-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
-  &__item--footer {
+  &__item:not(:last-child) {
     margin-right: 10px;
   }
 
