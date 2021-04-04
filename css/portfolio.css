@@ -16,6 +16,10 @@ body {
   background-color: var(--whiteTextColor);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -354,7 +358,7 @@ img {
   padding: 0;
   margin: 0;
   cursor: pointer;
-  z-index: 100;
+  background-color: red;
 }
 
 .menu-button .icon-menu-close {
@@ -369,6 +373,22 @@ img {
 
 .menu-button.is-open .icon-menu {
   display: none;
+}
+
+.menu-container {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  display: none;
+  background-color: yellow;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.menu-container.is-open {
+  display: block;
 }
 
 .filters__list {

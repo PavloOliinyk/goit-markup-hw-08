@@ -16,4 +16,8 @@ body {
   letter-spacing: 0.03em;
   color: var(--primaryTextColor);
   background-color: var(--whiteTextColor);
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
