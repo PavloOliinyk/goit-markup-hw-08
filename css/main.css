@@ -227,6 +227,7 @@ img {
 }
 
 .modal {
+  position: relative;
   padding: 40px;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -238,7 +239,7 @@ img {
   border-radius: 4px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .modal {
     max-width: 450px;
     min-height: 609px;
@@ -252,11 +253,16 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 528px;
+    max-width: 528px;
     min-height: 581px;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
+}
+
+.backdrop.is-hidden .modal {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
 }
 
 @media screen and (min-width: 1200px) {
@@ -626,6 +632,12 @@ img {
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
 .menu-button.is-open .icon-menu-close {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -671,8 +683,8 @@ img {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg-main.jpg);
-  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-main.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/main/desctop/hero-bg-desctop.jpg);
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/main/desctop/hero-bg-desctop.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -786,11 +798,6 @@ img {
 @media screen and (min-width: 1200px) {
   .production {
     display: block;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .production {
     padding-top: 47px;
   }
 }

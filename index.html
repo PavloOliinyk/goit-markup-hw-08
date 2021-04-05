@@ -174,32 +174,36 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="list production__list">
             <li class="production__item">
-              <img
-                class="production__image"
-                src="./images/img-1.jpg"
-                alt="Человек набирает текст на телефоне"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/desctop/apps-1-desctop.jpg    1x,
+                    ./images/main/desctop/apps-1-desctop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="production__image"
+                  src="./images/main/desctop/apps-1-desctop.jpg"
+                  alt="Человек набирает текст на телефоне"
+                />
+              </picture>
               <p class="subtitle production__desc">Десктопные приложения</p>
             </li>
             <li class="production__item">
               <img
                 class="production__image"
-                src="./images/img-2.jpg"
+                src="./images/main/desctop/apps-2-desctop.jpg"
                 alt="Телефон в руке возле компьютера"
-                width="370"
-                height="294"
               />
               <p class="subtitle production__desc">Мобильные приложения</p>
             </li>
             <li class="production__item">
               <img
                 class="production__image"
-                src="./images/img-3.jpg"
+                src="./images/main/desctop/apps-3-desctop.jpg"
                 alt="Подбор цвета в приложении на планшете"
-                width="370"
-                height="294"
               />
               <p class="subtitle production__desc">Дизайнерские решения</p>
             </li>
@@ -213,13 +217,37 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="list team__list">
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/foto-1.jpg"
-                alt="Фото члена команды"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/desctop/member-1-desctop.jpg    1x,
+                    ./images/main/desctop/member-1-desctop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/main/tablet/member-1-tablet.jpg    1x,
+                    ./images/main/tablet/member-1-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/main/mobile/member-1-mobile.jpg    1x,
+                    ./images/main/mobile/member-1-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/main/desctop/member-1-desctop.jpg"
+                  alt="Фото члена команды"
+                />
+              </picture>
               <div class="team__meta">
                 <h3 class="team__subtitle">Игорь Демьяненко</h3>
                 <p class="team__desc" lang="en">Product Designer</p>
@@ -258,10 +286,8 @@
             <li class="team__item">
               <img
                 class="team__img"
-                src="./images/foto-2.jpg"
+                src="./images/main/desctop/member-2-desctop.jpg"
                 alt="Фото члена команды"
-                width="270"
-                height="260"
               />
               <div class="team__meta">
                 <h3 class="team__subtitle">Ольга Репина</h3>
@@ -301,10 +327,8 @@
             <li class="team__item">
               <img
                 class="team__img"
-                src="./images/foto-3.jpg"
+                src="./images/main/desctop/member-3-desctop.jpg"
                 alt="Фото члена команды"
-                width="270"
-                height="260"
               />
               <div class="team__meta">
                 <h3 class="team__subtitle">Николай Тарасов</h3>
@@ -344,10 +368,8 @@
             <li class="team__item">
               <img
                 class="team__img"
-                src="./images/foto-4.jpg"
+                src="./images/main/desctop/member-4-desctop.jpg"
                 alt="Фото члена команды"
-                width="270"
-                height="260"
               />
               <div class="team__meta">
                 <h3 class="team__subtitle">Михаил Ермаков</h3>

@@ -126,6 +126,10 @@
   & .icon-menu-close {
     display: none;
   }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-button.is-open .icon-menu-close {

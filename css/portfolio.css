@@ -365,6 +365,12 @@ img {
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
 .menu-button.is-open .icon-menu-close {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
