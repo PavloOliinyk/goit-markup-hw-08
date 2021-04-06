@@ -26,6 +26,40 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media screen and (max-width: 1199px) {
+      max-width: 768px;
+      // height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+
+      background-image: linear-gradient(
+          to bottom,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../../images/main/tablet/hero-bg-tablet.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    @media screen and (max-width: 767px) {
+      max-width: 480px;
+      // height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+
+      background-image: linear-gradient(
+          to bottom,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../../images/main/mobile/hero-bg-mobile.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
   }
 
   &__title {
