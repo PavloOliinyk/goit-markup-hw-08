@@ -1,8 +1,22 @@
 .filters {
   &__list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
   }
 
   &__item:not(:last-child) {
@@ -38,16 +52,24 @@
 
 .cards {
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -30px;
+      margin-top: -30px;
+    }
   }
 
   &__item {
-    flex-basis: calc(100% / 3 - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 2 * 30px) / 2);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 3 * 30px) / 3);
+    }
   }
 
   &__link {
@@ -105,6 +127,7 @@
   &__subtitle {
     margin-bottom: 4px;
 
+    text-align: left;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
