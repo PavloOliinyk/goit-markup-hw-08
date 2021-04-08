@@ -65,6 +65,63 @@
             </a>
           </li>
         </ul>
+        <button type="button" class="burger-button" data-menu-button>
+          <svg class="icon" width="40" height="40">
+            <use href="./images/sprite.svg#menu"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu" data-menu>
+          <button type="button" class="mobile-menu__button" data-menu-close>
+            <svg class="icon" width="40" height="40">
+              <use href="./images/sprite.svg#menu-close"></use>
+            </svg>
+          </button>
+          <ul class="list mobile-nav">
+            <li class="mobile-nav__item">
+              <a href="./index.html" class="link mobile-nav__link">Студия</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a
+                href="./portfolio.html"
+                class="link mobile-nav__link mobile-nav__link--active"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-nav__item">
+              <a href="" class="link mobile-nav__link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="list mobile-auth">
+            <li class="mobile-auth__item">
+              <a
+                class="link mobile-auth__link mobile-auth__link--active"
+                href="mailto:info@example.com"
+              >
+                info@example.com</a
+              >
+            </li>
+            <li class="mobile-auth__item">
+              <a class="link mobile-auth__link" href="tel:+380961111111">
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+          <ul class="list mobile-messenger">
+            <li class="mobile-messenger__item">
+              <a href="" class="link mobile-messenger__link">Instagram</a>
+            </li>
+            <li class="mobile-messenger__item">
+              <a href="" class="link mobile-messenger__link">Twitter</a>
+            </li>
+            <li class="mobile-messenger__item">
+              <a href="" class="link mobile-messenger__link">Facebook</a>
+            </li>
+            <li class="mobile-messenger__item">
+              <a href="" class="link mobile-messenger__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -410,5 +467,7 @@
         </form>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

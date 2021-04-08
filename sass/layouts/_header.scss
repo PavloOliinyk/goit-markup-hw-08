@@ -2,14 +2,12 @@
   border-bottom: 1px solid #ececec;
 
   &__container {
-    @media screen and (max-width: 767px) {
-      position: relative;
-      padding: 10px 15px;
-    }
+    display: flex;
+    align-items: center;
 
-    @media screen and (min-width: 768px) {
-      display: flex;
-      align-items: center;
+    @media screen and (max-width: 767px) {
+      padding: 10px 15px;
+      justify-content: space-between;
     }
   }
 }
@@ -21,17 +19,14 @@
 }
 
 .nav-list {
+  display: none;
+
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
   }
 
   &__item {
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    font-size: 40px;
-    line-height: 1.18;
-
     @media screen and (min-width: 768px) {
       font-size: 14px;
       line-height: 1.14;
@@ -85,7 +80,13 @@
 }
 
 .auth-list {
-  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
 
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -132,54 +133,156 @@
   }
 }
 
-.menu-button {
+.burger-button {
   display: inline-flex;
-  color: var(--activeLinkColor);
+  color: var(--secondaryTextColor);
   border: none;
   padding: 0;
   margin: 0;
   cursor: pointer;
   background-color: transparent;
 
-  & .icon-menu-close {
-    display: none;
-  }
-
   @media screen and (min-width: 768px) {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    color: var(--activeLinkColor);
+  }
 }
 
-.menu-button.is-open .icon-menu-close {
-  display: inline-flex;
-}
+.mobile-menu {
+  @media screen and (max-width: 400px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-.menu-button.is-open .icon-menu {
-  display: none;
-}
+  position: fixed;
+  top: 0;
+  left: 50%;
 
-.menu-container {
-  @media screen and (max-width: 767px) {
-    display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  overflow-y: scroll;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-50%);
+  max-width: 480px;
+
+  padding: 48px 40px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 1;
+  }
+
+  &__button {
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    top: 10px;
+    right: 15px;
+    display: inline-flex;
+    color: var(--secondaryTextColor);
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background-color: transparent;
 
-    padding: 48px 40px;
+    &:hover,
+    &:focus {
+      color: var(--activeLinkColor);
+    }
+  }
+}
 
-    background-color: #ffffff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-      0px 1px 3px rgba(0, 0, 0, 0.16);
+.mobile-nav {
+  margin-bottom: 302px;
 
-    &.is-open {
-      display: block;
+  &__item {
+    margin-bottom: 32px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-size: 40px;
+    line-height: 1.18;
+  }
+
+  &__link {
+    color: var(--secondaryTextColor);
+
+    &:hover,
+    &:focus {
+      color: var(--activeLinkColor);
+    }
+
+    &--active {
+      color: var(--activeLinkColor);
+    }
+  }
+}
+
+.mobile-auth {
+  margin-bottom: 64px;
+  &__item {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+
+    letter-spacing: 0.02em;
+
+    & + & {
+      margin-top: 32px;
     }
   }
 
-  @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
+  &__link {
+    color: var(--primaryTextColor);
+
+    &--active {
+      font-size: 34px;
+      line-height: 1.18;
+      color: var(--activeLinkColor);
+    }
+  }
+}
+
+.mobile-messenger {
+  display: flex;
+
+  &__item {
+    position: relative;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+
+    letter-spacing: 0.02em;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:not(:last-child)::after {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      right: -10px;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(33, 33, 33, 0.2);
+    }
+  }
+
+  &__link {
+    color: var(--activeLinkColor);
   }
 }
