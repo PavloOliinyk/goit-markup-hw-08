@@ -210,11 +210,24 @@
               <picture>
                 <source
                   srcset="
-                    ./images/main/desctop/apps-1-desctop.jpg    1x,
-                    ./images/main/desctop/apps-1-desctop@2x.jpg 2x
+                    ./images/main/desktop/apps-1-desktop.jpg    1x,
+                    ./images/main/desktop/apps-1-desktop@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
-                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/main/tablet/apps-1-tablet.jpg    1x,
+                    ./images/main/tablet/apps-1-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/main/mobile/apps-1-mobile.jpg    1x,
+                    ./images/main/mobile/apps-1-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
                 />
                 <img
                   class="production__image"
